@@ -28,16 +28,26 @@ export default function Card({ value, color }: CardProps) {
   return (
     <div className="flex justify-center items-center w-60 aspect-[7/10] border border-gray-300 rounded-lg shadow-md">
       <div
-        className={`flex justify-center items-center w-52 aspect-[7/10] rounded-md ${bgColor}`}
+        className={`flex justify-center items-center overflow-hidden w-52 aspect-[7/10] rounded-md ${bgColor}`}
       >
         <div
-          className={`flex justify-center items-center w-44 h-72 rounded-[50%] bg-white transform rotate-[25deg]`}
+          className={`relative flex flex-wrap overflow-hidden w-48 h-72 rounded-[50%] bg-white transform rotate-[25deg]`}
         >
+          {/* value */}
           <div
-            className={`transform rotate-[-25deg] numbers-font font-normal text-9xl ${textColor} text-outline`}
+            className={`absolute inset-0 flex justify-center items-center rotate-[-25deg] numbers-font font-normal text-9xl ${textColor} text-outline`}
           >
             {value}
           </div>
+          {/* colors */}
+          {color === "black" && value === "" && (
+            <>
+              <div className="bg-red-600 w-1/2 h-1/2"></div>
+              <div className="bg-blue-500 w-1/2 h-1/2"></div>
+              <div className="bg-yellow-400 w-1/2 h-1/2"></div>
+              <div className="bg-green-700 w-1/2 h-1/2"></div>
+            </>
+          )}
         </div>
       </div>
     </div>

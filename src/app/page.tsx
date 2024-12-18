@@ -25,6 +25,10 @@ const numbers: Card[] = [
   {
     value: "",
     color: "black",
+  },
+  {
+    value: "9",
+    color: "green",
   }
 ];
 
