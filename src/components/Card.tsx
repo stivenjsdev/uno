@@ -27,9 +27,11 @@ export default function Card({ value, color }: CardProps) {
 
   return (
     <div className="flex justify-center items-center w-60 aspect-[7/10] border border-gray-300 rounded-lg shadow-md">
+      {/* card color */}
       <div
         className={`flex justify-center items-center overflow-hidden w-52 aspect-[7/10] rounded-md ${bgColor}`}
       >
+        {/* oval */}
         <div
           className={`relative flex flex-wrap overflow-hidden w-48 h-72 rounded-[50%] bg-white transform rotate-[25deg]`}
         >
@@ -39,7 +41,7 @@ export default function Card({ value, color }: CardProps) {
           >
             {value}
           </div>
-          {/* colors */}
+          {/* change color bg */}
           {color === "black" && value === "" && (
             <>
               <div className="bg-red-600 w-1/2 h-1/2"></div>
