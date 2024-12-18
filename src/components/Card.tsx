@@ -26,10 +26,10 @@ export default function Card({ value, color }: CardProps) {
   const textColor = useMemo(() => textColorMap[color], [color]);
 
   return (
-    <div className="flex justify-center items-center w-20 aspect-[7/10] border border-gray-300 rounded-lg shadow-md">
+    <div className="flex justify-center items-center w-20 aspect-[7/10] border border-gray-300 rounded-md shadow-md">
       {/* card color */}
       <div
-        className={`flex justify-center items-center overflow-hidden w-11/12 aspect-[7/10] rounded-md ${bgColor}`}
+        className={`flex justify-center items-center overflow-hidden w-[90%] h-[90%] rounded-sm ${bgColor}`}
       >
         {/* oval */}
         <div
